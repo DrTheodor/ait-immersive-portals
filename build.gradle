@@ -42,6 +42,14 @@ dependencies {
     }
 
     modApi("com.terraformersmc:modmenu:${project.modmenu_version}")
+
+    modImplementation("com.github.iPortalTeam.ImmersivePortalsMod:imm_ptl_core:${project.ip_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
+
+    modImplementation("com.github.iPortalTeam.ImmersivePortalsMod:q_misc_util:${project.ip_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
 }
 
 processResources {

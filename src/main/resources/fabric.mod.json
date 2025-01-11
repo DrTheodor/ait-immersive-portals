@@ -1,34 +1,35 @@
 {
   "schemaVersion": 1,
-  "id": "ait-example-addon",
+  "id": "aitip",
   "version": "${version}",
-  "name": "Example AIT Addon",
+  "name": "[AIT] Immersive Portals Compatibility",
   "description": "",
   "authors": [],
   "contact": {
     "repo": "https://github.com/pavatus/ait-example-addon"
   },
   "license": "MIT",
-  "icon": "assets/ait-example-addon/icon.png",
+  "icon": "assets/aitip/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
-      "com.aitexampleaddon.client.ExampleAddonModClient"
+      "dev.drtheo.aitip.client.PortalsCompatClientMod"
     ],
     "main": [
-      "com.aitexampleaddon.ExampleAddonMod"
+      "dev.drtheo.aitip.PortalsCompatMod"
     ],
     "ait-main": [
-      "com.aitexampleaddon.ait.ExampleAITAddon"
+      "dev.drtheo.aitip.ait.PortalsCompatAITAddon"
     ]
   },
   "mixins": [
-    "ait-example-addon.mixins.json"
+    "aitip.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
     "minecraft": "${minecraft_version}",
-    "ait": ">=1.1.0"
+    "ait": ">1.1.0",
+    "immersiveportals": "*"
   }
 }
